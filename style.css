@@ -1,0 +1,153 @@
+body {
+  font-family:  'Old Standard TT', serif; /*font for content*/
+  display: flex;
+    flex-direction: column;
+  height: 100;
+  width: 100vw;
+  line-height: 100%;
+  margin: 0;
+  
+}
+
+h1 {
+  font-family: "Times New Roman", sans-serif; /*differnt font for header*/
+  color: black;
+  height: 5%;
+  width: 100vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0px;
+  background-color: #607D8B;
+  display: flex;
+    justify-content: center; 
+    align-self: center /*aligning header on the page*/
+}
+
+.nav {
+  height: 2%;
+  width: 100vw;
+  padding-bottom: 30px;
+  display: flex;
+    justify-items: center;
+    align-items: stretch; /*aligning nav bar on the page*/
+}
+
+nav {
+  font-size: 1em;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  width: 100vw;
+  font-size: 1vw;
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+li {
+  width: 20%;
+}
+
+.main {
+  color: rgb(23, 23, 23);
+  min-height: 60%;
+  width: 100%;      
+}
+
+.footer {
+  background-color: rgba(204, 204, 204, 0.664); /*secondary colour for footer*/
+  width: 100%;
+  height: fit-content;
+  padding: 16px;
+}
+
+.button {
+  text-align: center;
+  color: #757575;
+  border: 4px;
+  padding: 10px 20px;
+  background-color: rgba(151, 209, 235, 0);
+  -webkit-transition-duration: 0.4s; /*button colour fades in and out*/
+  transition-duration: 0.4s;
+  border-radius: 12px /*rounded corners on buttons*/
+}
+
+.button:hover, .button:disabled {
+  background-color: #FF5252;
+  color: black; 
+} /*nav buttons change colour when you hover and button for current page is disabled*/
+
+a {
+  padding: 8px;
+  color: black;
+}
+
+article {
+  padding: 16px;
+  column-gap: 2em;	
+  column-rule: 1px dotted #BDBDBD;
+  min-height: 60%;
+  width: 100%;
+}
+
+section {
+  padding: 16px;
+  column-gap: 1.5em;
+  column-rule:  1px dotted #BDBDBD;
+}
+
+h2{
+  text-align: center;
+  line-height: 2em;
+}
+
+p {
+  line-height: 2em;
+  text-align: justify;
+  text-justify: inter-word;
+  border-radius: 12px;
+  color: #212121
+}
+
+cite {
+  text-align: start;
+  font-size: 1vw;
+}
+
+code {
+  background-color: rgb(204, 204, 204);
+}
+
+/*desktop*/
+@media screen and (max-width: 2560px) {
+  article {
+    column-count: 4;
+  }
+
+  section {
+    column-count: 2;
+  }
+}
+
+/*tablet*/
+@media screen and (max-width: 768px) {
+  article {
+    column-count: 2;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 425px) {
+  article {
+    column-count: 1;
+  }
+
+  section {
+    column-count: 1;
+  }
+
+  cite {
+    font-size: 10%;
+  }
+}
